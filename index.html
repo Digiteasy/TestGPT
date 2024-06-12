@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digiteasy Maturitätsmodell</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <img src="assets/images/logo.png" alt="Digiteasy Logo" id="logo">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#assessment">Assessment</a></li>
+                <li><a href="#results">Ergebnisse</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Willkommen bei Digiteasy</h1>
+            <p>Ihre Plattform für digitale Transformation und einfache Prozessoptimierung.</p>
+        </section>
+        <section id="assessment">
+            <h2>Maturitätsmodell Assessment</h2>
+            <form id="assessment-form">
+                <!-- Fragen werden hier dynamisch eingefügt -->
+            </form>
+            <button id="submit-assessment" type="button">Bewerten</button>
+        </section>
+        <section id="results">
+            <h2>Ergebnisse</h2>
+            <div id="results-content">
+                <!-- Ergebnisse werden hier angezeigt -->
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Kontaktieren Sie uns</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Nachricht:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Senden</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Digiteasy. Alle Rechte vorbehalten.</p>
+    </footer>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
