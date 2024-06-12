@@ -1,51 +1,80 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Beispiel-Fragen (diese würden normalerweise aus der Excel-Datei stammen)
-    const questions = [
-        "Wie bewerten Sie die digitale Reife Ihres Unternehmens?",
-        "Wie gut ist die IT-Infrastruktur in Ihrem Unternehmen?",
-        "Wie effektiv sind die digitalen Prozesse in Ihrem Unternehmen?"
-    ];
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    const form = document.getElementById('assessment-form');
-    const resultsContent = document.getElementById('results-content');
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    // Fragen dynamisch hinzufügen
-    questions.forEach((question, index) => {
-        const label = document.createElement('label');
-        label.htmlFor = `question-${index}`;
-        label.textContent = question;
-        
-        const input = document.createElement('input');
-        input.type = 'number';
-        input.id = `question-${index}`;
-        input.name = `question-${index}`;
-        input.min = 1;
-        input.max = 5;
-        input.required = true;
-        
-        form.appendChild(label);
-        form.appendChild(input);
-    });
+header #logo {
+    height: 40px;
+}
 
-    // Formulardaten verarbeiten und Ergebnisse anzeigen
-    document.getElementById('submit-assessment').addEventListener('click', function() {
-        const answers = questions.map((_, index) => {
-            const input = document.getElementById(`question-${index}`);
-            return parseInt(input.value);
-        });
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
 
-        // Beispiel-Berechnung der Ergebnisse
-        const total = answers.reduce((acc, val) => acc + val, 0);
-        const average = total / answers.length;
+nav li {
+    margin: 0 1em;
+}
 
-        resultsContent.innerHTML = `<p>Ihre durchschnittliche Bewertung: ${average.toFixed(2)}</p>`;
-    });
+nav a {
+    color: white;
+    text-decoration: none;
+}
 
-    // Kontaktformular
-    const contactForm = document.getElementById('contact-form');
-    contactForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        alert('Nachricht gesendet!');
-        contactForm.reset();
-    });
-});
+main {
+    padding: 2em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+h1, h2 {
+    color: #4CAF50;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1em;
+}
+
+input, textarea {
+    padding: 0.5em;
+    margin-top: 0.5em;
+}
+
+button {
+    margin-top: 1em;
+    padding: 0.5em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #f1f1f1;
+}
